@@ -1,9 +1,3 @@
--- MADE BY RIP#6666
--- send issues or suggestions to my discord: discord.gg/rips
-
-
-
-
 if not game:IsLoaded() then
     repeat
         task.wait()
@@ -168,11 +162,6 @@ coroutine.wrap(pcall)(function()
         workspace:FindFirstChildOfClass("Terrain").WaterReflectance = 0
         workspace:FindFirstChildOfClass("Terrain").WaterTransparency = 0
         sethiddenproperty(workspace:FindFirstChildOfClass("Terrain"), "Decoration", false)
-        StarterGui:SetCore("SendNotification", {
-            Title = "discord.gg/rips",
-            Text = "Low Water Graphics Enabled",
-            Duration = 5,
-            Button1 = "Okay"
         })
         warn("Low Water Graphics Enabled")
     end
@@ -182,11 +171,6 @@ coroutine.wrap(pcall)(function()
         Lighting.GlobalShadows = false
         Lighting.FogEnd = 9e9
         sethiddenproperty(Lighting, "Technology", 2)
-        StarterGui:SetCore("SendNotification", {
-            Title = "discord.gg/rips",
-            Text = "No Shadows Enabled",
-            Duration = 5,
-            Button1 = "Okay"
         })
         warn("No Shadows Enabled")
     end
@@ -194,11 +178,6 @@ end)
 coroutine.wrap(pcall)(function()
     if _G.Settings["Low Rendering"] or (_G.Settings.Other and _G.Settings.Other["Low Rendering"]) then
         settings().Rendering.QualityLevel = 1
-        StarterGui:SetCore("SendNotification", {
-            Title = "discord.gg/rips",
-            Text = "Low Rendering Enabled",
-            Duration = 5,
-            Button1 = "Okay"
         })
         warn("Low Rendering Enabled")
     end
@@ -208,29 +187,14 @@ coroutine.wrap(pcall)(function()
         if setfpscap then
             if type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "string" or type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "number" then
                 setfpscap(tonumber(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
-                StarterGui:SetCore("SendNotification", {
-                    Title = "Kaka Bok",
-                    Text = "FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])),
-                    Duration = 5,
-                    Button1 = "SEX!"
                 })
                 warn("FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
             elseif _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) == true then
                 setfpscap(1e6)
-                StarterGui:SetCore("SendNotification", {
-                    Title = "Kaka Bok",
-                    Text = "FPS Uncapped",
-                    Duration = 5,
-                    Button1 = "SEX!"
                 })
                 warn("FPS Uncapped")
             end
         else
-            StarterGui:SetCore("SendNotification", {
-                Title = "Kaka Bok",
-                Text = "FPS Cap Failed",
-                Duration = math.huge,
-                Button1 = "SEX!"
             })
             warn("FPS Cap Failed")
         end
@@ -238,11 +202,6 @@ coroutine.wrap(pcall)(function()
 end)
 local Descendants = ReturnDescendants()
 local WaitNumber = 500
-StarterGui:SetCore("SendNotification", {
-    Title = "Kaka Bok",
-    Text = "Checking " .. #Descendants .. " Instances...",
-    Duration = 15,
-    Button1 = "SEX!"
 })
 warn("Checking " .. #Descendants .. " Instances...")
 for i, v in pairs(Descendants) do
